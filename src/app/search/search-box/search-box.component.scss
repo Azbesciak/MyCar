@@ -2,12 +2,18 @@
   form {
     justify-self: center;
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 25px;
     .submit-btn {
-      grid-column: 2;
+      grid-column: 6;
       justify-self: center;
       align-self: center;
+    }
+    #area-search {
+      grid-column: 5;
+    }
+    #content-search {
+      grid-column: 4;
     }
   }
 }

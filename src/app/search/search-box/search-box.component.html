@@ -1,6 +1,7 @@
 <mat-card>
   <form>
-    <app-search-input></app-search-input>
+    <app-search-input id="content-search" title="Brand, Model" [possibleValues]=""></app-search-input>
+    <app-search-input id="area-search" title="Area" [possibleValues]=""></app-search-input>
     <button mat-raised-button color="primary" type="submit" class="submit-btn">Search</button>
   </form>
 </mat-card>
