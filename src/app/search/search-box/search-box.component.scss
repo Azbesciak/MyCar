@@ -1,0 +1,13 @@
+:host {
+  form {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-column-gap: 25px;
+    .submit-btn {
+      grid-column: 2;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+}

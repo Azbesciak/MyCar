@@ -3,6 +3,8 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './routing-module/app-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HeaderModule} from './header/header.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import {AppRoutingModule} from './routing-module/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
