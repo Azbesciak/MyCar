@@ -1,0 +1,48 @@
+.body-type {
+  display: grid;
+  grid-template-columns: 35px auto;
+  grid-column-gap: 5px;
+  align-items: center;
+  .image {
+    grid-column: 1;
+    width: 35px;
+    height: 14px;
+    top: 2px;
+    background-image: url("~src/assets/profiles.png");
+  }
+  .cabrio {
+    background-position: 0 -14px;
+  }
+  .sedan {
+    background-position: -35px -14px;
+  }
+  .coupe {
+    background-position: -70px -14px;
+  }
+  .pickup {
+    background-position: -105px -14px;
+  }
+  .hatchback {
+    background-position: -140px -14px;
+  }
+  .combi {
+    background-position: -175px -14px;
+  }
+  .offroad{
+    background-position: -210px -14px;
+  }
+  .minibus {
+    background-position: -245px -14px;
+  }
+  .minivan {
+    background-position: -280px -14px;
+  }
+  .suv {
+    background-position: -315px -14px;
+  }
+
+  .name {
+    grid-column: 2;
+  }
+
+}

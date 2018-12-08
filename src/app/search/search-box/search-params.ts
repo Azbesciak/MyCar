@@ -33,5 +33,5 @@ type Transmission = 'automatic.hydraulic' |
 
 type SteeringWheelSide = 'right' | 'left';
 
-type CarBody = 'cabrio' | 'sedan' | 'hatchback' | 'minibus' | 'minivan' | 'SUV' | 'coupe' | 'off road' | 'combi' | 'pickup';
+type CarBody = 'cabrio' | 'sedan' | 'hatchback' | 'minibus' | 'minivan' | 'suv' | 'coupe' | 'offroad' | 'combi' | 'pickup';
 
