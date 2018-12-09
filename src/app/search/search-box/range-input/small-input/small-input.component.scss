@@ -1,0 +1,23 @@
+:host {
+  mat-form-field /deep/ {
+    width: 77.5px;
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+    }
+
+    .mat-form-field-underline {
+      bottom: 0 !important;
+    }
+
+    .mat-form-field-infix {
+      padding: .25em 0;
+      border-top: 0 !important;
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

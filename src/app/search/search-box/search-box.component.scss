@@ -4,16 +4,32 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 25px;
+
     .submit-btn {
       grid-column: 6;
+      grid-row: 1;
       justify-self: center;
       align-self: center;
     }
     #area-search {
       grid-column: 5;
+      grid-row: 1;
     }
+    app-advanced-trigger {
+      grid-column: 7;
+      grid-row: 1;
+      align-self: center;
+    }
+
     #content-search {
       grid-column: 4;
+      grid-row: 1;
+    }
+
+    app-advanced-search {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 9;
     }
   }
 }

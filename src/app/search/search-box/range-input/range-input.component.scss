@@ -1,0 +1,17 @@
+:host {
+  display: grid;
+  grid-template-areas: "title title" "from to";
+  grid-template-columns: 1fr 1fr;
+  width: 180px;
+  grid-template-rows: 15px auto;
+  grid-gap: 5px;
+  .title {
+    grid-area: title;
+  }
+  .from-field {
+    grid-area: from
+  }
+  .to-field {
+    grid-area: to;
+  }
+}

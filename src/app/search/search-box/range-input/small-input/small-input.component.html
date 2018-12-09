@@ -1,0 +1,15 @@
+<mat-form-field class="to-field" floatLabel=never>
+  <input matInput [ngModel]="value" (ngModelChange)="updateValue($event)"
+         [placeholder]="placeholder"
+         (focus)="hidePlaceholder()"
+         (blur)="showPlaceholder()"
+         type="number" min="0"
+  >
+  <button mat-button *ngIf="value"
+          matSuffix mat-icon-button
+          aria-label="Clear"
+          (click)="updateValue(null)"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>

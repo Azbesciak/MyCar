@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-select placeholder="Colors" multiple [value]="value" (valueChange)="updateValue($event)">
+    <mat-option *ngFor="let color of colors" [value]="color">
+      <div class="color-select">
+        <div [ngStyle]="{'background-color': color}" class="color"></div>
+        <div class="name">{{color}}</div>
+      </div>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

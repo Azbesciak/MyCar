@@ -1,5 +1,5 @@
 <mat-form-field>
-  <mat-select placeholder="type of body" multiple>
+  <mat-select placeholder="type of body" multiple [value]="value" (valueChange)="updateValue($event)">
     <mat-option *ngFor="let bodyType of bodyTypes" [value]="bodyType">
       <div class="body-type">
         <div [ngClass]="bodyType" class="image"></div>

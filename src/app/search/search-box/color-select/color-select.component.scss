@@ -1,0 +1,16 @@
+.color-select {
+  display: grid;
+  grid-template-columns: 14px auto;
+  grid-column-gap: 5px;
+  align-items: center;
+
+  .color {
+    grid-column: 1;
+    width: 14px;
+    height: 14px;
+  }
+
+  .name {
+    grid-column: 2;
+  }
+}

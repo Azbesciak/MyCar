@@ -1,8 +1,12 @@
 <mat-card>
   <form>
-    <app-search-input id="content-search" title="Brand, Model" [possibleValues]=""></app-search-input>
-    <app-search-input id="area-search" title="Area" [possibleValues]=""></app-search-input>
+    <app-search-input id="content-search" name="Brand, Model"
+                      [possibleValues]=""
+                      [(value)]="searchParams.query"></app-search-input>
+    <app-search-input id="area-search" name="Area" [possibleValues]=""
+                      [(value)]="searchParams.area"></app-search-input>
     <button mat-raised-button color="primary" type="submit" class="submit-btn">Search</button>
-    <app-body-type></app-body-type>
+    <app-advanced-trigger [(advanced)]="advancedSearch"></app-advanced-trigger>
+    <app-advanced-search [searchParams]="searchParams" *ngIf="advancedSearch"></app-advanced-search>
   </form>
 </mat-card>

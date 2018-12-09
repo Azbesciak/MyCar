@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CarBody, Condition, Petrol, SearchParams, SteeringWheelSide, Transmission, ValueRange} from './search-params';
 
 @Component({
   selector: 'app-search-box',
@@ -6,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-box.component.scss']
 })
 export class SearchBoxComponent implements OnInit {
-  constructor() { }
+  searchParams = new SearchParamsModel();
+  advancedSearch = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+}
+
+class SearchParamsModel implements SearchParams {
+  area: String;
+  areaRange: number;
+  brand: String;
+  carBody: CarBody[] = [];
+  color: string[] = [];
+  condition: Condition;
+  engineCapacity: ValueRange = {};
+  hp: ValueRange = {};
+  millage: ValueRange = {};
+  model: String;
+  origin: string[] = [];
+  petrol: Petrol[] = [];
+  price: ValueRange = {};
+  query: String;
+  steeringWheel: SteeringWheelSide[] = [];
+  transmission: Transmission[] = [];
+  yearOfProd: ValueRange = {};
 }

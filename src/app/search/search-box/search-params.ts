@@ -1,37 +1,67 @@
-interface SearchParams {
+export interface SearchParams {
   query?: String;
   brand?: String;
   model?: String;
   area?: String;
-  areaRange: number;
+  areaRange?: number;
   carBody: CarBody[];
-  yearOfProd?: Range;
-  hp?: Range;
+  yearOfProd?: ValueRange;
+  hp?: ValueRange;
   transmission: Transmission[];
-  engineCapacity?: Range;
-  milage?: Range;
-  origin?: string[];
-  price?: Range;
+  engineCapacity?: ValueRange;
+  millage?: ValueRange;
+  origin: string[];
+  price?: ValueRange;
   petrol: Petrol[];
   condition?: Condition;
   color: string[];
   steeringWheel: SteeringWheelSide[];
 }
 
-interface Range {
+export interface ValueRange {
   from?: number;
   to?: number;
 }
 
-type Condition = 'notDamaged' | 'damaged';
-type Petrol = 'diesel' | 'petrol' | 'LPG' | 'CNG/Hybrid' | 'electric';
-type Transmission = 'automatic.hydraulic' |
-  'automatic.stepless (CVT)' |
-  'automatic.dual-clutch(dct,dsg)' |
+export type Condition = 'notDamaged' | 'damaged';
+export type Petrol = 'diesel' | 'petrol' | 'LPG' | 'CNG/Hybrid' | 'electric';
+export const petrols: Petrol[] = [
+  'diesel',
+  'petrol',
+  'electric',
+  'CNG/Hybrid',
+  'LPG'
+];
+export type Transmission =
+  'automatic hydraulic' |
+  'automatic stepless (CVT)' |
+  'automatic dual-clutch(dct,dsg)' |
   'manual' |
   'half-automatic';
+export const transmission: Transmission[] = [
+  'manual',
+  'automatic dual-clutch(dct,dsg)',
+  'automatic hydraulic',
+  'automatic stepless (CVT)',
+  'half-automatic'
+];
 
-type SteeringWheelSide = 'right' | 'left';
+export type SteeringWheelSide = 'right' | 'left';
+export const steeringWheel: SteeringWheelSide[] = ['right', 'left'];
 
-type CarBody = 'cabrio' | 'sedan' | 'hatchback' | 'minibus' | 'minivan' | 'suv' | 'coupe' | 'offroad' | 'combi' | 'pickup';
+export type CarBody = 'cabrio' | 'sedan' | 'hatchback' | 'minibus' |
+  'minivan' | 'suv' | 'coupe' | 'offroad' | 'combi' | 'pickup';
+
+export const bodyTypes: CarBody[] = [
+  'cabrio',
+  'combi',
+  'coupe',
+  'hatchback',
+  'minibus',
+  'minivan',
+  'pickup',
+  'sedan',
+  'offroad',
+  'suv'
+];
 

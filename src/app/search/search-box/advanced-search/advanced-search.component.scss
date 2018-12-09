@@ -1,0 +1,8 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  app-body-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

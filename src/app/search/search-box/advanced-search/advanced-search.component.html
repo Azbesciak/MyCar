@@ -1,0 +1,15 @@
+<app-body-type [(value)]="searchParams.carBody"></app-body-type>
+<app-range-input id="horse-power" name="Horse power" [value]="searchParams.hp"></app-range-input>
+<app-range-input id="millage" name="Millage" [value]="searchParams.millage"></app-range-input>
+<app-range-input id="engine-capacity" name="Engine capacity"
+                 [value]="searchParams.engineCapacity"></app-range-input>
+<app-range-input id="year-of-prod" name="Year of production"
+                 [value]="searchParams.yearOfProd"></app-range-input>
+<app-range-input id="price" name="Price"
+                 [value]="searchParams.price"></app-range-input>
+<app-search-input id="brand" name="Brand" [(value)]="searchParams.brand"></app-search-input>
+<app-search-input id="model" name="Model" [(value)]="searchParams.model"></app-search-input>
+<app-color-select [(value)]="searchParams.color"></app-color-select>
+<app-multi-select name="Petrol" [possibleValues]="petrols" [(value)]="searchParams.petrol"></app-multi-select>
+<app-multi-select name="Transmission" [possibleValues]="transmission" [(value)]="searchParams.transmission"></app-multi-select>
+<app-multi-select name="Steering Wheel" [possibleValues]="steeringWheel" [(value)]="searchParams.steeringWheel"></app-multi-select>
