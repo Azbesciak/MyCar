@@ -1,0 +1,32 @@
+
+.offer-list {
+    list-style: none;
+}
+
+.offer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2em;
+}
+
+.offer-info {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+.car-img {
+    height: 200px;
+    width: 300px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+
+.logo-img {
+    width: 125px;
+}

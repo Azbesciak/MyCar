@@ -1,0 +1,19 @@
+<div>
+  <li *ngFor="let offer of offers" class="offer-list">
+    <div class="offer">
+      <a href="{{offer.url}}">
+        <img class="car-img" src="{{offer.car.imageURL}}">
+      </a>
+      <div class="offer-info">
+        <h2><a href={{offer.url}}>{{offer.title}}</a></h2>
+        <h3>{{offer.car.brand}} {{offer.car.model}}</h3>
+        <h1>{{offer.price}}</h1> 
+      </div>
+      <div class="service-info">
+        <a href="{{offer.serviceUrl}}">
+          <img class="logo-img" src="{{offer.serviceLogo}}">
+        </a>
+      </div>
+    </div>
+  </li>
+</div>>

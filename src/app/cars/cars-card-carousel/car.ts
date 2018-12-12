@@ -13,6 +13,10 @@ export interface CarRecommendation {
   title: string;
   owner: string;
   car: Car;
+  price: string;
   service: string;
   favourite?: boolean;
+  url: string;
+  serviceLogo: string;
+  serviceUrl: string;
 }

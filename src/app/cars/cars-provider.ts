@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 
 export interface CarsProvider {
   getRecommendations(user?: User): Observable<CarRecommendation[]>;
+  searchCars(brand: string): Observable<CarRecommendation[]>;
 }
 
 export const CARS_TOKEN = new InjectionToken<CarsProvider>('cars_service');
