@@ -5,12 +5,10 @@
                     (breakpoint)="breakpoint($event)"
                     (afterChange)="afterChange($event)"
                     (beforeChange)="beforeChange($event)">
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img src="{{ slide.img }}" alt="" width="100%">
+  <div ngxSlickItem *ngFor="let slide of items" class="slide">
+    <ng-container [ngTemplateOutlet]="templateRef"
+                  [ngTemplateOutletContext]="{$implicit: slide}">
+
+    </ng-container>
   </div>
 </ngx-slick-carousel>
-
-<button (click)="addSlide()">Add</button>
-<button (click)="removeSlide()">Remove</button>
-<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-<button (click)="slickModal.unslick()">unslick</button>

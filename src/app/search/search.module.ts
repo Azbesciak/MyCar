@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {SearchComponent} from './search.component';
 import {SearchRoutingModule} from './search-routing.module';
 import {SearchBoxModule} from './search-box/search-box.module';
-import {CarouselModule} from '../carousel/carousel.module';
+import {CarsCardCarouselModule} from '../cars/cars-card-carousel/cars-card-carousel.module';
 
 @NgModule({
   declarations: [SearchComponent],
@@ -11,7 +11,7 @@ import {CarouselModule} from '../carousel/carousel.module';
     CommonModule,
     SearchRoutingModule,
     SearchBoxModule,
-    CarouselModule
+    CarsCardCarouselModule
   ]
 })
 export class SearchModule {

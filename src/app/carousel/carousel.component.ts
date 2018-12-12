@@ -1,27 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ContentChild, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent<T> implements OnInit {
 
-  slides = [
-    {img: 'http://placehold.it/350x150/000000'},
-    {img: 'http://placehold.it/350x150/111111'},
-    {img: 'http://placehold.it/350x150/333333'},
-    {img: 'http://placehold.it/350x150/666666'}
-  ];
+  @ContentChild(TemplateRef)
+  templateRef: TemplateRef<any>;
+
+  @Input()
+  items: T[];
   slideConfig = {'slidesToShow': 4, 'slidesToScroll': 4};
-
-  addSlide() {
-    this.slides.push({img: 'http://placehold.it/350x150/777777'});
-  }
-
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
 
   slickInit(e) {
     console.log('slick initialized');
