@@ -8,8 +8,7 @@ import {CarsProviderService} from './cars-provider.service';
   imports: [
     CommonModule
   ],
-  providers: [
-    {
+  providers: [{
       provide: CARS_TOKEN,
       useClass: CarsProviderService
     }

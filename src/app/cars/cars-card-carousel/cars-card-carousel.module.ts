@@ -2,14 +2,18 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CarsCardCarouselComponent} from './cars-card-carousel.component';
 import {CarouselModule} from '../../carousel/carousel.module';
-import {MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule} from '@angular/material';
+import {CarsModule} from '../cars.module';
 
 @NgModule({
   declarations: [CarsCardCarouselComponent],
   imports: [
     CommonModule,
     CarouselModule,
-    MatCardModule
+    CarsModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
   ],
   exports: [CarsCardCarouselComponent]
 })

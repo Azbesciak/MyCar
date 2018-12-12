@@ -4,6 +4,9 @@ export interface Car {
   year: number;
   city: string;
   imageURL: string;
+  hp: number;
+  millage: number;
+  capacity: number;
 }
 
 export interface CarRecommendation {
@@ -11,4 +14,5 @@ export interface CarRecommendation {
   owner: string;
   car: Car;
   service: string;
+  favourite?: boolean;
 }

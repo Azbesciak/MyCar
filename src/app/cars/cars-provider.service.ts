@@ -12,12 +12,16 @@ export class CarsProviderService implements CarsProvider {
       service: 'Allegro',
       owner: 'Tadeusz',
       title: 'Best AUDI ever',
+      favourite: true,
       car: {
         brand: 'Audi',
         model: 'A5',
         city: 'Radom',
         imageURL: 'https://static.cargurus.com/images/site/2018/01/28/15/06/2018_audi_a5_sportback_2_0t_quattro_premium_plus_awd-pic-6950271395309042165-640x480.jpeg',
-        year: 2012
+        year: 2012,
+        millage: 123400,
+        hp: 310,
+        capacity: 3.2
       }
     },
     {
@@ -26,10 +30,13 @@ export class CarsProviderService implements CarsProvider {
       title: 'Your new Merc!',
       car: {
         brand: 'Mercedes-Benz',
-        model: 'E Klass',
+        model: 'E-Class',
         city: 'Rzeszów',
-        imageURL: 'https://d-gr.ppstatic.pl/kadry/k/r/gr-ogl/1f/01/76090_179988184_mercedes-benz-klasa-e-w212-350-e350-cdi-full-led-navi-skory-gwarancja_xlarge.jpg',
-        year: 2011
+        imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQ2-dE2I-JO1vOrEF1hCVzZxLJzD8iZpC37csQsb6Tn80-2j5',
+        year: 2011,
+        millage: 31000,
+        hp: 210,
+        capacity: 2.2
       }
     },
     {
@@ -41,7 +48,10 @@ export class CarsProviderService implements CarsProvider {
         model: 'Carrera',
         city: 'Warszawa',
         imageURL: 'https://st.motortrend.com/uploads/sites/10/2015/09/porsche-911-gt3-rs-spied-front-three-quarters-03.jpg',
-        year: 2018
+        year: 2018,
+        millage: 56000,
+        hp: 500,
+        capacity: 4.5
       }
     },
     {
@@ -53,7 +63,10 @@ export class CarsProviderService implements CarsProvider {
         model: 'Civic',
         city: 'Gdańsk',
         imageURL: 'https://www.autocentrum.pl/ac-file/gallery-photo/58947ccb592c7d8328944700.jpg',
-        year: 2017
+        year: 2017,
+        hp: 190,
+        millage: 11000,
+        capacity: 2.2
       }
     }
   ]];

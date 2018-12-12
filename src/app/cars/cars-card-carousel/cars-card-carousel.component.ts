@@ -9,6 +9,9 @@ import {CarRecommendation} from './car';
 export class CarsCardCarouselComponent implements OnInit {
 
   @Input()
+  title: string;
+
+  @Input()
   cars: CarRecommendation[];
 
   constructor() {

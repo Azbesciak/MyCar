@@ -1,0 +1,71 @@
+:host {
+  mat-card-content {
+    .name, .params {
+      display: flex;
+    }
+    .name {
+      font-size: 1.25em;
+      font-weight: 500;
+      flex-flow: wrap;
+      div {
+        margin-right: 5px;
+        display: inline;
+      }
+    }
+    .params {
+      div:not(:last-child) {
+        &:after {
+          content: "•";
+          color: #97979791;
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+      }
+    }
+
+  }
+  mat-card-footer {
+    align-items: center;
+    position: absolute;
+    bottom: 16px;
+    left: 32px;
+    right: 16px;
+    display: grid;
+    color: #979797;
+    grid-template-areas: "city year sub";
+    grid-template-columns: auto auto min-content;
+    .city {
+      grid-area: city;
+    }
+    .sub {
+      grid-area: sub;
+      justify-self: end;
+    }
+    .favourite {
+      color: gold;
+    }
+    .year {
+      justify-self: end;
+      grid-area: year;
+    }
+  }
+  .title {
+    color: #363636;
+    margin-left: 7px;
+  }
+  mat-card {
+    width: 193px;
+    height: 300px;
+    margin: 6.5px;
+  }
+  mat-card-title {
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    object-fit: cover;
+    width: 225px;
+    height: 125px;
+  }
+}
