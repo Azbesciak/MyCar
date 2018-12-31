@@ -9,6 +9,8 @@ import {CarRecommendation} from '../cars/cars-card-carousel/car';
 })
 export class SearchComponent implements OnInit {
   recommendations: CarRecommendation[] = [];
+  subscriptions: CarRecommendation[] = [];
+  lastViewed: CarRecommendation[] = [];
 
   constructor(
     @Inject(CARS_TOKEN) private carsProvider: CarsProvider
@@ -18,5 +20,11 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.carsProvider.getRecommendations()
       .subscribe(c => this.recommendations = c);
+
+    this.carsProvider.getSubscriptions()
+      .subscribe(c => this.subscriptions = c);
+
+    this.carsProvider.getLastViewed()
+      .subscribe(c => this.lastViewed = c);
   }
 }

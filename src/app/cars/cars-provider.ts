@@ -5,6 +5,11 @@ import {Observable} from 'rxjs';
 
 export interface CarsProvider {
   getRecommendations(user?: User): Observable<CarRecommendation[]>;
+
+  getSubscriptions(user?: User): Observable<CarRecommendation[]>;
+
+  getLastViewed(user?: User): Observable<CarRecommendation[]>;
+
   searchCars(brand: string): Observable<CarRecommendation[]>;
 }
 

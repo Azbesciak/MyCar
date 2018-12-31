@@ -7,7 +7,7 @@ import {of, Observable} from 'rxjs';
 @Injectable()
 export class CarsProviderService implements CarsProvider {
 
-  private baseCars: CarRecommendation[] = [
+  private recommendations: CarRecommendation[] = [
     {
       service: 'Allegro',
       owner: 'Tadeusz',
@@ -87,14 +87,177 @@ export class CarsProviderService implements CarsProvider {
     }
   ];
 
-  constructor() {
-  }
+  private subscribtions: CarRecommendation[] = [
+    {
+      service: 'autogielda',
+      owner: 'Krzysztof',
+      title: 'MERCEDES ML 63',
+      car: {
+        brand: 'Mercedes-Benz',
+        model: 'ML 63',
+        city: 'Wrocław',
+        imageURL: 'https://zdjecia.autogielda.pl/Z11/740/994/mercedes_ml_63,IN8WKKJ,Z,1.jpg',
+        year: 2013,
+        hp: 525,
+        millage: 74000,
+        capacity: 5.5
+      },
+      favourite: true,
+      url: 'https://www.autogielda.pl/sprzedam_mercedes_ml_63,mercedes_ml_63,IN8WKKJ.html',
+      price: '35 000 EUR',
+      serviceUrl: 'https://www.autogielda.pl',
+      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+    }, {
+      service: 'autogielda',
+      owner: 'Rafał',
+      title: 'GMC ACADIA DENALI',
+      car: {
+        brand: 'GMC',
+        model: 'Acadia Denali',
+        city: 'Wrocław',
+        imageURL: 'https://zdjecia.autogielda.pl/Z13/652/034/gmc_acadia_denali,IN8TRYR,Z,2.jpg',
+        year: 2015,
+        hp: 280,
+        millage: 50000,
+        capacity: 3.6
+      },
+      favourite: true,
+      url: 'https://www.autogielda.pl/sprzedam_inne,gmc_acadia_denali,IN8TRYR.html',
+      price: '135 000 zł',
+      serviceUrl: 'https://www.autogielda.pl',
+      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+    }, {
+      service: 'autogielda',
+      owner: 'Przemysław',
+      title: 'NISSAN QASHQAI +2 ROK 2013 DIESEL 1.5',
+      car: {
+        brand: 'NISSAN',
+        model: 'QASHQAI +2',
+        city: 'Jelenia Góra',
+        imageURL: 'https://d-mf.ppstatic.pl/art/9v/6r/cy8lf0o4wc0ws840os8wo/4e4b8383bc29b-d.1200.jpg',
+        year: 2013,
+        hp: 115,
+        millage: 154000,
+        capacity: 1.5
+      },
+      favourite: true,
+      url: 'https://www.autogielda.pl/sprzedam_nissan_42,nissan_qashqai__2_rok_2013_diesel_1_5,IP8RWFX.html',
+      price: '39 000 zł',
+      serviceUrl: 'https://www.autogielda.pl',
+      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+    }, {
+      service: 'Kup auto',
+      owner: 'Katarzyna',
+      title: 'Audi A3 2.0TDi CR 150KM*Alu*Nawi*Ks serwis',
+      car: {
+        brand: 'Audi',
+        model: 'A3',
+        city: 'Nowy Sącz',
+        imageURL: 'http://www.autopanel.pl/upload/photos/1685589_b03d721d81fbb7ec024c95c23c16762c.jpg',
+        year: 2014,
+        hp: 150,
+        millage: 9513,
+        capacity: 2.0
+      },
+      favourite: true,
+      url: 'http://www.kup-auto.pl/index.php?s=card&id=100908',
+      price: '51 900 zł',
+      serviceUrl: 'http://www.kup-auto.pl',
+      serviceLogo: 'http://www.kup-auto.pl/assets/img/nowe.jpg'
+    }
+  ];
+
+  lastViewed: CarRecommendation[] = [
+    {
+      service: 'gumtree',
+      owner: 'Izabela',
+      title: '2010 Skoda Superb Sedan',
+      car: {
+        brand: 'Skoda',
+        model: 'Superb',
+        city: 'Kraków',
+        imageURL: 'https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/xbIAAOSw18Jb1cDS/$_20.JPG',
+        year: 2010,
+        hp: 150,
+        millage: 165000,
+        capacity: 1.8
+      },
+      url: 'https://www.gumtree.pl/a-samochody-osobowe/krakow/2010-skoda-superb-sedan/1003369242660911225329709',
+      price: '29 500 zł',
+      serviceUrl: 'https://www.gumtree.pl',
+      serviceLogo: 'https://securet9.classistatic.com/1.1.1279/images/pl_PL/logo.png'
+    }, {
+      service: 'AAA auto',
+      owner: 'AAA Auto',
+      title: 'Toyota Yaris 2016',
+      car: {
+        brand: 'Toyota',
+        model: 'Yaris',
+        city: 'Warszawa',
+        imageURL: 'https://img.aaaauto.eu/thumb/300022102_1024x768x75.jpg',
+        year: 2016,
+        hp: 100,
+        millage: 10341,
+        capacity: 1.5
+      },
+      favourite: true,
+      url: 'https://www.aaaauto.pl/pl/toyota-yaris/car.html?id=242229257#category=12&srclp=small&promo=b',
+      price: '55 000 zł',
+      serviceUrl: 'https://www.aaaauto.pl/',
+      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
+    }, {
+      service: 'AAA Auto',
+      owner: 'AAA Auto',
+      title: 'Volkswagen Arteon 2017',
+      car: {
+        brand: 'Volkswagen',
+        model: 'Arteon',
+        city: 'Poznań',
+        imageURL: 'https://img.aaaauto.eu/thumb/300014658_1024x768x75.jpg',
+        year: 2017,
+        hp: 236,
+        millage: 13630,
+        capacity: 2.0
+      },
+      favourite: true,
+      url: 'https://www.aaaauto.pl/pl/vw-arteon/car.html?id=220542916',
+      price: '207 000 zł',
+      serviceUrl: 'https://www.aaaauto.pl/',
+      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
+    }, {
+      service: 'AAA Auto',
+      owner: 'AAA Auto',
+      title: 'Audi A5 2016',
+      car: {
+        brand: 'Audi',
+        model: 'A5',
+        city: 'Poznań',
+        imageURL: 'https://img.aaaauto.eu/thumb/900162112_1_1024x768x75.jpg',
+        year: 2016,
+        hp: 187,
+        millage: 30641,
+        capacity: 2.0
+      },
+      url: 'https://www.aaaauto.pl/pl/audi-a5/car.html?id=236141387#category=15&srclp=4x4&promo=b',
+      price: '125 000 zł',
+      serviceUrl: 'https://www.aaaauto.pl/',
+      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
+    }
+  ];
 
   getRecommendations(user?: User): Observable<CarRecommendation[]> {
-    return of(this.baseCars);
+    return of(this.recommendations);
   }
 
   searchCars(brand: string): Observable<CarRecommendation[]> {
-    return of(this.baseCars.filter(offer => offer.car.brand.toLowerCase().indexOf(brand.toLowerCase()) != -1));
+    return of(this.recommendations.filter(offer => offer.car.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1));
+  }
+
+  getLastViewed(user?: User): Observable<CarRecommendation[]> {
+    return of(this.lastViewed);
+  }
+
+  getSubscriptions(user?: User): Observable<CarRecommendation[]> {
+    return of(this.subscribtions);
   }
 }

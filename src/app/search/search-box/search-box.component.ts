@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CarBody, Condition, Petrol, SearchParams, SteeringWheelSide, Transmission, ValueRange} from './search-params';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-box',
@@ -10,7 +11,9 @@ export class SearchBoxComponent implements OnInit {
   searchParams = new SearchParamsModel();
   advancedSearch = false;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
   }
 
   ngOnInit() {
