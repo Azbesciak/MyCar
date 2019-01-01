@@ -8,7 +8,6 @@ app-cars-list {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: 200px;
-    margin: 2em;
 
     .car-img {
       grid-column: 1/4;
