@@ -1,24 +1,28 @@
 import {Component, OnInit} from '@angular/core';
 import {CarBody, Condition, Petrol, SearchParams, SteeringWheelSide, Transmission, ValueRange} from './search-params';
 import {Router} from '@angular/router';
+import {LastOfferService} from '../last-offer.service';
+import {Paths} from '../../pages/routing-module/paths';
 
 @Component({
   selector: 'app-search-box',
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.scss']
 })
-export class SearchBoxComponent implements OnInit {
+export class SearchBoxComponent {
   searchParams = new SearchParamsModel();
   advancedSearch = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private lastResult: LastOfferService
   ) {
   }
 
-  ngOnInit() {
+  search() {
+    this.lastResult.submit(this.searchParams);
+    this.router.navigate([Paths.RESULTS]);
   }
-
 }
 
 class SearchParamsModel implements SearchParams {

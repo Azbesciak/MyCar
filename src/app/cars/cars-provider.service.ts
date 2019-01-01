@@ -1,23 +1,23 @@
 import {Injectable} from '@angular/core';
 import {User} from '../authorization/user';
 import {CarsProvider} from './cars-provider';
-import {CarRecommendation} from './cars-card-carousel/car';
+import {CarOffer, Seller, Service} from './cars-card-carousel/car';
 import {of, Observable} from 'rxjs';
+import {SearchParams} from './search-box/search-params';
 
 @Injectable()
 export class CarsProviderService implements CarsProvider {
 
-  private recommendations: CarRecommendation[] = [
+  private recommendations: CarOffer[] = [
     {
-      service: 'Allegro',
-      owner: 'Tadeusz',
+      service: Services.ALLEGRO,
+      seller: Sellers.TADEUSZ,
       title: 'Best AUDI ever',
+      images: ['https://static.cargurus.com/images/site/2018/01/28/15/06/2018_audi_a5_sportback_2_0t_quattro_premium_plus_awd-pic-6950271395309042165-640x480.jpeg'],
       favourite: true,
       car: {
         brand: 'Audi',
         model: 'A5',
-        city: 'Radom',
-        imageURL: 'https://static.cargurus.com/images/site/2018/01/28/15/06/2018_audi_a5_sportback_2_0t_quattro_premium_plus_awd-pic-6950271395309042165-640x480.jpeg',
         year: 2012,
         millage: 123400,
         hp: 310,
@@ -25,18 +25,16 @@ export class CarsProviderService implements CarsProvider {
       },
       url: 'https://allegro.pl/ogloszenie/audi-a5-8t-7722268565',
       price: '15 000 zł',
-      serviceUrl: 'https://allegro.pl/',
-      serviceLogo: 'https://prowly-uploads.s3.eu-west-1.amazonaws.com/uploads/press_kit/file_name/2613/preview_Slajd2.jpg'
+
     },
     {
-      service: 'Gratka',
-      owner: 'Radek',
+      service: Services.GRATKA,
+      seller: Sellers.RADEK,
       title: 'Your new Merc!',
+      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQ2-dE2I-JO1vOrEF1hCVzZxLJzD8iZpC37csQsb6Tn80-2j5'],
       car: {
         brand: 'Mercedes-Benz',
         model: 'E-Class',
-        city: 'Rzeszów',
-        imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQ2-dE2I-JO1vOrEF1hCVzZxLJzD8iZpC37csQsb6Tn80-2j5',
         year: 2011,
         millage: 31000,
         hp: 210,
@@ -44,37 +42,31 @@ export class CarsProviderService implements CarsProvider {
       },
       url: 'https://gratka.pl/motoryzacja/mercedes-benz-klasa-e-w211-lift-4x4-gwarancja-pakiet-korzysci-swiat-rabaty/ob/8081451',
       price: '5 000 zł',
-      serviceUrl: 'https://gratka.pl/',
-      serviceLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gratka_logo.svg/1280px-Gratka_logo.svg.png'
     },
     {
-      service: 'OtoMOTO',
-      owner: 'Krzysztof',
+      service: Services.OTOMOTO,
+      seller: Sellers.KRZYSZTOF,
       title: 'Fast Porsche FAST SELL',
+      images: ['https://st.motortrend.com/uploads/sites/10/2015/09/porsche-911-gt3-rs-spied-front-three-quarters-03.jpg'],
       car: {
         brand: 'Porche',
         model: 'Carrera',
-        city: 'Warszawa',
-        imageURL: 'https://st.motortrend.com/uploads/sites/10/2015/09/porsche-911-gt3-rs-spied-front-three-quarters-03.jpg',
         year: 2018,
         millage: 56000,
         hp: 500,
         capacity: 4.5
       },
       url: 'https://www.otomoto.pl/oferta/porsche-carrera-gt-pierwszy-wlasciciel-po-serwisie-unikat-od-budrolpol-pelna-akcyza-i-vat-ID6B3tQI.html#54823fda81',
-      price: '999 999 zł',
-      serviceUrl: 'https://www.otomoto.pl/',
-      serviceLogo: 'http://rycar.pl/wp-content/uploads/2016/03/logo-otomoto.png'
+      price: '999 999 zł'
     },
     {
-      service: 'OLX',
-      owner: 'Andrzej',
+      service: Services.OLX,
+      seller: Sellers.ANRZEJ,
       title: 'Honda after crash',
+      images: ['https://www.autocentrum.pl/ac-file/gallery-photo/58947ccb592c7d8328944700.jpg'],
       car: {
         brand: 'Honda',
         model: 'Civic',
-        city: 'Gdańsk',
-        imageURL: 'https://www.autocentrum.pl/ac-file/gallery-photo/58947ccb592c7d8328944700.jpg',
         year: 2017,
         hp: 190,
         millage: 11000,
@@ -82,21 +74,18 @@ export class CarsProviderService implements CarsProvider {
       },
       url: 'https://www.olx.pl/oferta/honda-civic-viii-1-8-i-vtec-type-s-CID5-IDxDc9x.html#0c8909f4af',
       price: '1 000 000 zł',
-      serviceUrl: 'https://www.olx.pl/',
-      serviceLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/OLX_Logo.jpg/720px-OLX_Logo.jpg'
     }
   ];
 
-  private subscribtions: CarRecommendation[] = [
+  private subscribtions: CarOffer[] = [
     {
-      service: 'autogielda',
-      owner: 'Krzysztof',
+      service: Services.AUTO_GIELDA,
+      seller: Sellers.KAROL,
+      images: ['https://zdjecia.autogielda.pl/Z11/740/994/mercedes_ml_63,IN8WKKJ,Z,1.jpg'],
       title: 'MERCEDES ML 63',
       car: {
         brand: 'Mercedes-Benz',
         model: 'ML 63',
-        city: 'Wrocław',
-        imageURL: 'https://zdjecia.autogielda.pl/Z11/740/994/mercedes_ml_63,IN8WKKJ,Z,1.jpg',
         year: 2013,
         hp: 525,
         millage: 74000,
@@ -105,17 +94,15 @@ export class CarsProviderService implements CarsProvider {
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_mercedes_ml_63,mercedes_ml_63,IN8WKKJ.html',
       price: '35 000 EUR',
-      serviceUrl: 'https://www.autogielda.pl',
-      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+
     }, {
-      service: 'autogielda',
-      owner: 'Rafał',
+      service: Services.AUTO_GIELDA,
+      seller: Sellers.RAFAL,
+      images: ['https://zdjecia.autogielda.pl/Z13/652/034/gmc_acadia_denali,IN8TRYR,Z,2.jpg'],
       title: 'GMC ACADIA DENALI',
       car: {
         brand: 'GMC',
         model: 'Acadia Denali',
-        city: 'Wrocław',
-        imageURL: 'https://zdjecia.autogielda.pl/Z13/652/034/gmc_acadia_denali,IN8TRYR,Z,2.jpg',
         year: 2015,
         hp: 280,
         millage: 50000,
@@ -123,18 +110,15 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_inne,gmc_acadia_denali,IN8TRYR.html',
-      price: '135 000 zł',
-      serviceUrl: 'https://www.autogielda.pl',
-      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+      price: '135 000 zł'
     }, {
-      service: 'autogielda',
-      owner: 'Przemysław',
+      service: Services.AUTO_GIELDA,
+      seller: Sellers.PRZEMEK,
+      images: ['https://d-mf.ppstatic.pl/art/9v/6r/cy8lf0o4wc0ws840os8wo/4e4b8383bc29b-d.1200.jpg'],
       title: 'NISSAN QASHQAI +2 ROK 2013 DIESEL 1.5',
       car: {
         brand: 'NISSAN',
         model: 'QASHQAI +2',
-        city: 'Jelenia Góra',
-        imageURL: 'https://d-mf.ppstatic.pl/art/9v/6r/cy8lf0o4wc0ws840os8wo/4e4b8383bc29b-d.1200.jpg',
         year: 2013,
         hp: 115,
         millage: 154000,
@@ -142,18 +126,15 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_nissan_42,nissan_qashqai__2_rok_2013_diesel_1_5,IP8RWFX.html',
-      price: '39 000 zł',
-      serviceUrl: 'https://www.autogielda.pl',
-      serviceLogo: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+      price: '39 000 zł'
     }, {
-      service: 'Kup auto',
-      owner: 'Katarzyna',
+      service: Services.KUP_AUTO,
+      seller: Sellers.KASIA,
+      images: ['http://www.autopanel.pl/upload/photos/1685589_b03d721d81fbb7ec024c95c23c16762c.jpg'],
       title: 'Audi A3 2.0TDi CR 150KM*Alu*Nawi*Ks serwis',
       car: {
         brand: 'Audi',
         model: 'A3',
-        city: 'Nowy Sącz',
-        imageURL: 'http://www.autopanel.pl/upload/photos/1685589_b03d721d81fbb7ec024c95c23c16762c.jpg',
         year: 2014,
         hp: 150,
         millage: 9513,
@@ -162,21 +143,18 @@ export class CarsProviderService implements CarsProvider {
       favourite: true,
       url: 'http://www.kup-auto.pl/index.php?s=card&id=100908',
       price: '51 900 zł',
-      serviceUrl: 'http://www.kup-auto.pl',
-      serviceLogo: 'http://www.kup-auto.pl/assets/img/nowe.jpg'
     }
   ];
 
-  lastViewed: CarRecommendation[] = [
+  lastViewed: CarOffer[] = [
     {
-      service: 'gumtree',
-      owner: 'Izabela',
+      service: Services.GUM_TREE,
+      seller: Sellers.IZA,
       title: '2010 Skoda Superb Sedan',
+      images: ['https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/xbIAAOSw18Jb1cDS/$_20.JPG'],
       car: {
         brand: 'Skoda',
         model: 'Superb',
-        city: 'Kraków',
-        imageURL: 'https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/xbIAAOSw18Jb1cDS/$_20.JPG',
         year: 2010,
         hp: 150,
         millage: 165000,
@@ -184,17 +162,14 @@ export class CarsProviderService implements CarsProvider {
       },
       url: 'https://www.gumtree.pl/a-samochody-osobowe/krakow/2010-skoda-superb-sedan/1003369242660911225329709',
       price: '29 500 zł',
-      serviceUrl: 'https://www.gumtree.pl',
-      serviceLogo: 'https://securet9.classistatic.com/1.1.1279/images/pl_PL/logo.png'
     }, {
-      service: 'AAA auto',
-      owner: 'AAA Auto',
+      service: Services.AAA_AUTO,
+      seller: Sellers.AAA_AUTO_WAW,
+      images: ['https://img.aaaauto.eu/thumb/300022102_1024x768x75.jpg'],
       title: 'Toyota Yaris 2016',
       car: {
         brand: 'Toyota',
         model: 'Yaris',
-        city: 'Warszawa',
-        imageURL: 'https://img.aaaauto.eu/thumb/300022102_1024x768x75.jpg',
         year: 2016,
         hp: 100,
         millage: 10341,
@@ -203,17 +178,14 @@ export class CarsProviderService implements CarsProvider {
       favourite: true,
       url: 'https://www.aaaauto.pl/pl/toyota-yaris/car.html?id=242229257#category=12&srclp=small&promo=b',
       price: '55 000 zł',
-      serviceUrl: 'https://www.aaaauto.pl/',
-      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
     }, {
-      service: 'AAA Auto',
-      owner: 'AAA Auto',
+      service: Services.AAA_AUTO,
+      seller: Sellers.AAA_AUTO_POZ,
       title: 'Volkswagen Arteon 2017',
+      images: ['https://img.aaaauto.eu/thumb/300014658_1024x768x75.jpg'],
       car: {
         brand: 'Volkswagen',
         model: 'Arteon',
-        city: 'Poznań',
-        imageURL: 'https://img.aaaauto.eu/thumb/300014658_1024x768x75.jpg',
         year: 2017,
         hp: 236,
         millage: 13630,
@@ -222,42 +194,135 @@ export class CarsProviderService implements CarsProvider {
       favourite: true,
       url: 'https://www.aaaauto.pl/pl/vw-arteon/car.html?id=220542916',
       price: '207 000 zł',
-      serviceUrl: 'https://www.aaaauto.pl/',
-      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
     }, {
-      service: 'AAA Auto',
-      owner: 'AAA Auto',
+      service: Services.AAA_AUTO,
+      seller: Sellers.AAA_AUTO_POZ,
       title: 'Audi A5 2016',
+      images: ['https://img.aaaauto.eu/thumb/900162112_1_1024x768x75.jpg'],
       car: {
         brand: 'Audi',
         model: 'A5',
-        city: 'Poznań',
-        imageURL: 'https://img.aaaauto.eu/thumb/900162112_1_1024x768x75.jpg',
         year: 2016,
         hp: 187,
         millage: 30641,
         capacity: 2.0
       },
       url: 'https://www.aaaauto.pl/pl/audi-a5/car.html?id=236141387#category=15&srclp=4x4&promo=b',
-      price: '125 000 zł',
-      serviceUrl: 'https://www.aaaauto.pl/',
-      serviceLogo: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
+      price: '125 000 zł'
     }
   ];
 
-  getRecommendations(user?: User): Observable<CarRecommendation[]> {
+  getRecommendations(user?: User): Observable<CarOffer[]> {
     return of(this.recommendations);
   }
 
-  searchCars(brand: string): Observable<CarRecommendation[]> {
-    return of(this.recommendations.filter(offer => offer.car.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1));
+  searchCars(params?: SearchParams): Observable<CarOffer[]> {
+    let cars = [
+      ...this.recommendations,
+      ...this.subscribtions,
+      ...this.lastViewed
+    ];
+    if (params && params.brand) {
+      cars = cars.filter(offer => offer.car.brand.toLowerCase().indexOf(params.brand.toLowerCase()) !== -1);
+    }
+    return of(cars);
   }
 
-  getLastViewed(user?: User): Observable<CarRecommendation[]> {
+  getLastViewed(user?: User): Observable<CarOffer[]> {
     return of(this.lastViewed);
   }
 
-  getSubscriptions(user?: User): Observable<CarRecommendation[]> {
+  getSubscriptions(user?: User): Observable<CarOffer[]> {
     return of(this.subscribtions);
   }
+}
+
+class Services {
+  static ALLEGRO: Service = {
+    logoUrl: 'https://assets.allegrostatic.com/metrum/brand/allegro-347440b030.svg',
+    name: 'Allegro',
+    url: 'https://allegro.pl/'
+  };
+  static GRATKA: Service = {
+    name: 'Gratka',
+    url: 'https://gratka.pl/',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gratka_logo.svg/1280px-Gratka_logo.svg.png'
+  };
+  static OTOMOTO: Service = {
+    name: 'OtoMOTO',
+    url: 'https://www.otomoto.pl/',
+    logoUrl: 'http://rycar.pl/wp-content/uploads/2016/03/logo-otomoto.png'
+  };
+  static OLX: Service = {
+    name: 'OLX',
+    url: 'https://www.olx.pl/',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/OLX_Logo.jpg/720px-OLX_Logo.jpg'
+  };
+  static AUTO_GIELDA: Service = {
+    name: 'autogielda',
+    url: 'https://www.autogielda.pl',
+    logoUrl: 'https://www.autogielda.pl/assets_ag/images/logo_stare.png'
+  };
+  static KUP_AUTO: Service = {
+    name: 'Kup auto',
+    url: 'http://www.kup-auto.pl',
+    logoUrl: 'http://www.kup-auto.pl/assets/img/nowe.jpg'
+  };
+  static GUM_TREE: Service = {
+    name: 'gumtree',
+    url: 'https://www.gumtree.pl',
+    logoUrl: 'https://securet9.classistatic.com/1.1.1279/images/pl_PL/logo.png'
+  };
+  static AAA_AUTO: Service = {
+    name: 'AAA auto',
+    url: 'https://www.aaaauto.pl/',
+    logoUrl: 'https://www.aaaauto.pl/images/white/logo_aaaauto_cz.jpg'
+  };
+}
+
+class Sellers {
+  static RAFAL: Seller = {
+    name: 'Rafał',
+    city: 'Katowice'
+  };
+  static TADEUSZ: Seller = {
+    name: 'Tadeusz',
+    city: 'Radom'
+  };
+  static RADEK: Seller = {
+    name: 'Radek',
+    city: 'Radom'
+  };
+  static KRZYSZTOF: Seller = {
+    name: 'Krzysztof',
+    city: 'Warszawa'
+  };
+  static ANRZEJ: Seller = {
+    name: 'Andrzej',
+    city: 'Gdańsk'
+  };
+  static KAROL: Seller = {
+    name: 'Karol',
+    city: 'Wrocław'
+  };
+  static PRZEMEK: Seller = {
+    name: 'Przemysław',
+    city: 'Jelenia Góra',
+  };
+  static KASIA: Seller = {
+    name: 'Katarzyna',
+    city: 'Nowy Sącz',
+  };
+  static IZA: Seller = {
+    name: 'Izabela',
+    city: 'Kraków',
+  };
+  static AAA_AUTO_WAW: Seller = {
+    name: 'AAA Auto',
+    city: 'Warszawa',
+  };
+  static AAA_AUTO_POZ: Seller = {
+    name: 'AAA Auto',
+    city: 'Poznań',
+  };
 }

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CarRecommendation} from './car';
+import {CarOffer} from './car';
+import {CarOfferService} from '../car-offer/car-offer.service';
 
 @Component({
   selector: 'app-cars-card-carousel',
@@ -12,12 +13,16 @@ export class CarsCardCarouselComponent implements OnInit {
   title: string;
 
   @Input()
-  cars: CarRecommendation[];
+  cars: CarOffer[];
 
-  constructor() {
+  constructor(private offerService: CarOfferService) {
   }
 
   ngOnInit() {
+  }
+
+  open(offer: CarOffer) {
+    this.offerService.show(offer);
   }
 
 }

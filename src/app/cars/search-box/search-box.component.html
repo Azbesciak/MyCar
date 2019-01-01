@@ -1,5 +1,5 @@
 <mat-card>
-  <form>
+  <form (submit)="search()">
     <app-search-input id="content-search" name="Brand, Model"
                       [possibleValues]=""
                       [(value)]="searchParams.query"></app-search-input>

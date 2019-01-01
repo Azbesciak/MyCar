@@ -2,10 +2,10 @@
 <app-carousel [items]="cars">
   <ng-template let-value>
     <mat-card>
-      <mat-card-title>
+      <mat-card-title (click)="open(value)">
         {{value.title}}
       </mat-card-title>
-      <img mat-card-image [src]="value.car.imageURL" [alt]="value.title">
+      <img mat-card-image [src]="value.images[0]" [alt]="value.title">
       <mat-card-content>
         <div class="name">
           <div class="brand">{{value.car.brand}}</div>
@@ -18,7 +18,7 @@
         </div>
       </mat-card-content>
       <mat-card-footer>
-        <div class="city">{{value.car.city}}</div>
+        <div class="city">{{value.seller.city}}</div>
         <div class="year">{{value.car.year}}</div>
         <button class="sub" [ngClass]="{'favourite': value.favourite}"
                 mat-icon-button (click)="value.favourite = !value.favourite">

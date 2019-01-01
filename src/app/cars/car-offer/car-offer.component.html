@@ -1,3 +1,7 @@
-<p>
-  Car offer works!
-</p>>
+<ng-container *ngIf="offer">
+  <div class="title">{{offer.title}}</div>
+  <img [src]="offer.images[0]" [alt]="offer.title"/>
+  <div class="parameters">
+    <app-key-value key="Hp" [value]="offer.car.hp"></app-key-value>
+  </div>
+</ng-container>

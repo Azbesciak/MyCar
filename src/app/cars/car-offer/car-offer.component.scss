@@ -1,0 +1,10 @@
+app-car-offer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  img {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+  }
+}

@@ -2,21 +2,29 @@ export interface Car {
   brand: string;
   model: string;
   year: number;
-  city: string;
-  imageURL: string;
   hp: number;
   millage: number;
   capacity: number;
 }
 
-export interface CarRecommendation {
+export interface Service {
+  logoUrl: string;
+  url: string;
+  name: string;
+}
+
+export interface Seller {
+  name: string;
+  city: string;
+}
+
+export interface CarOffer {
   title: string;
-  owner: string;
-  car: Car;
   price: string;
-  service: string;
+  images: string[];
+  car: Car;
+  service: Service;
+  seller: Seller;
   favourite?: boolean;
   url: string;
-  serviceLogo: string;
-  serviceUrl: string;
 }

@@ -1,27 +1,21 @@
-import {Component, OnInit, Input, Inject} from '@angular/core';
-import {CarRecommendation} from '../cars-card-carousel/car';
-import {CARS_TOKEN} from '../cars-provider';
-import {CarsProviderService} from '../cars-provider.service';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {CarOffer} from '../cars-card-carousel/car';
+import {CarOfferService} from '../car-offer/car-offer.service';
 
 @Component({
   selector: 'app-cars-list',
   templateUrl: './cars-list.component.html',
-  styleUrls: ['./cars-list.component.scss']
+  styleUrls: ['./cars-list.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class CarsListComponent implements OnInit {
+export class CarsListComponent {
   @Input()
-  offers: CarRecommendation[] = [];
+  offers: CarOffer[] = [];
 
-  constructor(@Inject(CARS_TOKEN) private carsProviderService: CarsProviderService) {
+  constructor(private offerService: CarOfferService) {
   }
 
-  ngOnInit() {
-    this.loadOffers();
-  }
-
-  loadOffers() {
-    this.carsProviderService.getRecommendations().subscribe(
-      offers => this.offers = offers
-    );
+  open(offer: CarOffer) {
+    this.offerService.show(offer);
   }
 }
