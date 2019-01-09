@@ -9,3 +9,6 @@ html {
   min-height: 100vh;
   font-family: Roboto,"Helvetica Neue",sans-serif;
 }
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+  transform: none !important;
+}

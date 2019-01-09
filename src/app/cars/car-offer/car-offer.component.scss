@@ -1,10 +1,41 @@
 app-car-offer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  img {
-    max-height: 200px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 10px;
+
+  app-gallery {
     height: auto;
     width: auto;
-    max-width: 300px;
+    grid-column: 1;
   }
+
+  .parameters {
+    grid-column: 2;
+
+    app-key-value {
+      padding: 3px;
+      border-radius: 2px;
+      &:nth-child(odd) {
+        background-color: #d7dcf8;
+      }
+
+      &:nth-child(even) {
+        background-color: #bfd5f8;
+      }
+
+      &:not(last) {
+        margin-bottom: 1px;
+      }
+
+    }
+  }
+
+  .title {
+    grid-column: 1/3;
+    grid-row: 1;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
 }

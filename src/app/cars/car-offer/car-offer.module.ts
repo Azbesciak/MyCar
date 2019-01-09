@@ -5,13 +5,15 @@ import {MatDialogModule} from '@angular/material';
 import {CarOfferModalComponent} from './car-offer-modal/car-offer-modal.component';
 import {CarOfferComponent} from './car-offer.component';
 import {KeyValueModule} from '../../ui/key-value/key-value.module';
+import {GalleryModule} from '../../ui/gallery/gallery.module';
 
 @NgModule({
   declarations: [CarOfferModalComponent, CarOfferComponent],
   imports: [
     CommonModule,
     MatDialogModule,
-    KeyValueModule
+    KeyValueModule,
+    GalleryModule
   ],
   providers: [
     CarOfferService

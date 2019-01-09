@@ -1,7 +1,10 @@
 <ng-container *ngIf="offer">
   <div class="title">{{offer.title}}</div>
-  <img [src]="offer.images[0]" [alt]="offer.title"/>
+  <app-gallery [images]="images"></app-gallery>
   <div class="parameters">
-    <app-key-value key="Hp" [value]="offer.car.hp"></app-key-value>
+    <app-key-value
+      *ngFor="let kv of offer.car | keyvalue"
+      [key]="kv.key | titlecase" [value]="kv.value"
+    ></app-key-value>
   </div>
 </ng-container>
