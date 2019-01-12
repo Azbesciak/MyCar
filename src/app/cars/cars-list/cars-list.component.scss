@@ -8,7 +8,12 @@ app-cars-list {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: 200px;
-
+    mat-card-title {
+      display: grid;
+      grid-template-columns: max-content min-content;
+      grid-column-gap: 5px;
+      line-height: 25px;
+    }
     .car-img {
       grid-column: 1/4;
       grid-row: 1/5;

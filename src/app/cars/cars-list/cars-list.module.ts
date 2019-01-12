@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CarsListComponent } from './cars-list.component';
 import {CarOfferModule} from '../car-offer/car-offer.module';
 import {MatCardModule} from '@angular/material';
+import {FavouriteBtnModule} from '../favourite-btn/favourite-btn.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {MatCardModule} from '@angular/material';
   imports: [
     CommonModule,
     CarOfferModule,
-    MatCardModule
+    MatCardModule,
+    FavouriteBtnModule
   ],
   exports: [
     CarsListComponent

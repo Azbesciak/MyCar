@@ -1,7 +1,7 @@
 <mat-card *ngFor="let offer of offers" class="offer" (click)="open(offer)">
   <img class="car-img" [src]="offer.images[0]" [alt]="offer.title">
   <div class="offer-info">
-    <mat-card-title>{{offer.title}}</mat-card-title>
+    <mat-card-title>{{offer.title}} <app-favourite-btn [offer]="offer"></app-favourite-btn></mat-card-title>
     <mat-card-subtitle>{{offer.car.brand}} {{offer.car.model}}</mat-card-subtitle>
     <div>{{offer.price.value | currency:offer.price.currency}}</div>
   </div>
