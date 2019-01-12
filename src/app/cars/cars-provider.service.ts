@@ -150,7 +150,7 @@ export class CarsProviderService implements CarsProvider {
       service: Services.AUTO_GIELDA,
       seller: Sellers.PRZEMEK,
       images: ['https://d-mf.ppstatic.pl/art/9v/6r/cy8lf0o4wc0ws840os8wo/4e4b8383bc29b-d.1200.jpg'],
-      title: 'NISSAN QASHQAI +2 ROK 2013 DIESEL 1.5',
+      title: 'NISSAN QASHQAI +2 2013 DIESEL 1.5',
       car: {
         brand: 'NISSAN',
         model: 'QASHQAI +2',
@@ -169,7 +169,7 @@ export class CarsProviderService implements CarsProvider {
       service: Services.KUP_AUTO,
       seller: Sellers.KASIA,
       images: ['http://www.autopanel.pl/upload/photos/1685589_b03d721d81fbb7ec024c95c23c16762c.jpg'],
-      title: 'Audi A3 2.0TDi CR 150KM*Alu*Nawi*Ks serwis',
+      title: 'Audi A3 2.0TDi CR 150KM Alu Nawi Ks serwis',
       car: {
         brand: 'Audi',
         model: 'A3',
