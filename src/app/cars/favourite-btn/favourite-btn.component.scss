@@ -1,5 +1,8 @@
 $btn-size: 24px;
 app-favourite-btn {
+  display: grid;
+  place-self: center;
+  color: #70809073;
   .sub {
     grid-area: sub;
     justify-self: end;

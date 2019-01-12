@@ -1,6 +1,25 @@
 <ng-container *ngIf="offer">
-  <div class="title">{{offer.title}}</div>
+  <div class="title">
+    <div>{{offer.title}}</div>
+    <app-favourite-btn [offer]="offer"></app-favourite-btn>
+  </div>
   <app-gallery [images]="images"></app-gallery>
+  <div class="offer-details">
+    <div class="price">
+      <div class="main">{{offer.price.value | currency:offer.price.currency}}</div>
+      <div class="type">{{offer.price.net ? 'net' : 'gross'}}</div>
+      <div class="rate" *ngIf="offer.price.rateValue">
+        {{offer.price.rateValue | currency:offer.price.currency}} in {{offer.price.rates}} rates
+      </div>
+    </div>
+    <div class="offer">
+      <a [href]="offer.url" target="_blank" class="original-offer-reference">
+        <img [src]="offer.service.logoUrl" [alt]="offer.service.name">
+        <div class="offer-reference">Go to offer</div>
+      </a>
+    </div>
+    <app-trust-indicator *ngIf="offer.features.trustLevel" [trustLevel]="offer.features.trustLevel"></app-trust-indicator>
+  </div>
   <div class="parameters">
     <app-key-value
       *ngFor="let kv of offer.car | keyvalue"

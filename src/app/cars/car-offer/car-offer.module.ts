@@ -6,6 +6,8 @@ import {CarOfferModalComponent} from './car-offer-modal/car-offer-modal.componen
 import {CarOfferComponent} from './car-offer.component';
 import {KeyValueModule} from '../../ui/key-value/key-value.module';
 import {GalleryModule} from '../../ui/gallery/gallery.module';
+import {FavouriteBtnModule} from '../favourite-btn/favourite-btn.module';
+import {TrustIndicatorModule} from '../trust-indicator/trust-indicator.module';
 
 @NgModule({
   declarations: [CarOfferModalComponent, CarOfferComponent],
@@ -13,7 +15,9 @@ import {GalleryModule} from '../../ui/gallery/gallery.module';
     CommonModule,
     MatDialogModule,
     KeyValueModule,
-    GalleryModule
+    GalleryModule,
+    FavouriteBtnModule,
+    TrustIndicatorModule
   ],
   providers: [
     CarOfferService
