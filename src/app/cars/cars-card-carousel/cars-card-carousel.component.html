@@ -23,6 +23,7 @@
         </div>
       </mat-card-content>
       <mat-card-footer>
+        <div class="price">{{value.price.value | currency:value.price.currency}}</div>
         <div class="city">{{value.seller.city}}</div>
         <div class="year">{{value.car.year}}</div>
         <button class="sub" [ngClass]="{'favourite': value.favourite}"

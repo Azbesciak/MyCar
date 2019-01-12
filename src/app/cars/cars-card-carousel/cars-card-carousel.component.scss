@@ -35,14 +35,18 @@
   mat-card-footer {
     align-items: center;
     position: absolute;
-    bottom: 16px;
+    bottom: 24px;
     left: 32px;
     right: 16px;
     display: grid;
     color: #979797;
-    grid-template-areas: "city year sub";
+    grid-template-areas: "price price price" "city year sub";
     grid-template-columns: auto auto min-content;
-
+    .price {
+      grid-area: price;
+      color: #363636e0;
+      font-weight: 700;
+    }
     .city {
       grid-area: city;
     }
@@ -50,6 +54,10 @@
     .sub {
       grid-area: sub;
       justify-self: end;
+      mat-icon, & {
+        height: 24px;
+        line-height: 24px;
+      }
     }
 
     .favourite {
@@ -69,7 +77,7 @@
 
   mat-card {
     width: 193px;
-    height: 300px;
+    height: 320px;
     margin: 6.5px;
   }
 
