@@ -51,17 +51,9 @@
       grid-area: city;
     }
 
-    .sub {
+    app-favourite-btn {
       grid-area: sub;
-      justify-self: end;
-      mat-icon, & {
-        height: 24px;
-        line-height: 24px;
-      }
-    }
-
-    .favourite {
-      color: gold;
+      padding: 0 5px 5px;
     }
 
     .year {

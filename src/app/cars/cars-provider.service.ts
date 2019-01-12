@@ -14,7 +14,11 @@ export class CarsProviderService implements CarsProvider {
       seller: Sellers.TADEUSZ,
       title: 'Best AUDI ever',
       images: ['https://static.cargurus.com/images/site/2018/01/28/15/06/2018_audi_a5_sportback_2_0t_quattro_premium_plus_awd-pic-6950271395309042165-640x480.jpeg'],
-      favourite: true,
+      features: {
+        favourite: true,
+        premium: true,
+        trustLevel: 10
+      },
       car: {
         brand: 'Audi',
         model: 'A5',
@@ -50,7 +54,6 @@ export class CarsProviderService implements CarsProvider {
         'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Im9ib3B5cnloNXNpMTEtT1RPTU9UT1BMIn0.8uwLPIFUuTlg-SJBEh6_VkP34keTAwMNFS9NleUpVqo/image;s=1080x720;cars_;/868480520_;slot=11;filename=eyJmbiI6Im9ib3B5cnloNXNpMTEtT1RPTU9UT1BMIn0.8uwLPIFUuTlg-SJBEh6+VkP34keTAwMNFS9NleUpVqo_rev001.jpg',
         'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImJxdzQyb2ZodGt5eTEtT1RPTU9UT1BMIn0.NFp66THBKeLn-HDE6n3bnfe6zta8QW6XVLPs1LQQRcg/image;s=1080x720;cars_;/868480520_;slot=12;filename=eyJmbiI6ImJxdzQyb2ZodGt5eTEtT1RPTU9UT1BMIn0.NFp66THBKeLn-HDE6n3bnfe6zta8QW6XVLPs1LQQRcg_rev001.jpg',
         'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6InNyd2Z6cDZoNzJ5ZDMtT1RPTU9UT1BMIn0.p3LWFDnzQUjIP8PFblZ_zzK0EgZOP12au9dUBsNSJVY/image;s=1080x720;cars_;/868480520_;slot=13;filename=eyJmbiI6InNyd2Z6cDZoNzJ5ZDMtT1RPTU9UT1BMIn0.p3LWFDnzQUjIP8PFblZ+zzK0EgZOP12au9dUBsNSJVY_rev001.jpg',
-
       ],
       car: {
         brand: 'Mercedes-Benz',
@@ -65,6 +68,10 @@ export class CarsProviderService implements CarsProvider {
         value: 5_000,
         currency: 'PLN'
       },
+      features: {
+        trustLevel: 5,
+        premium: true
+      }
     },
     {
       service: Services.OTOMOTO,
@@ -83,6 +90,9 @@ export class CarsProviderService implements CarsProvider {
       price: {
         value: 999_999,
         currency: 'EUR'
+      },
+      features: {
+        trustLevel: 9
       }
     },
     {
@@ -103,6 +113,9 @@ export class CarsProviderService implements CarsProvider {
         value: 1_000_000,
         currency: 'GBP'
       },
+      features: {
+        trustLevel: 1
+      }
     }
   ];
 
@@ -120,7 +133,9 @@ export class CarsProviderService implements CarsProvider {
         millage: 74000,
         capacity: 5.5
       },
-      favourite: true,
+      features: {
+        favourite: true
+      },
       url: 'https://www.autogielda.pl/sprzedam_mercedes_ml_63,mercedes_ml_63,IN8WKKJ.html',
       price: {
         value: 35_000,
@@ -140,7 +155,9 @@ export class CarsProviderService implements CarsProvider {
         millage: 50000,
         capacity: 3.6
       },
-      favourite: true,
+      features: {
+        favourite: true
+      },
       url: 'https://www.autogielda.pl/sprzedam_inne,gmc_acadia_denali,IN8TRYR.html',
       price: {
         value: 135_000,
@@ -159,7 +176,9 @@ export class CarsProviderService implements CarsProvider {
         millage: 154000,
         capacity: 1.5
       },
-      favourite: true,
+      features: {
+        favourite: true
+      },
       url: 'https://www.autogielda.pl/sprzedam_nissan_42,nissan_qashqai__2_rok_2013_diesel_1_5,IP8RWFX.html',
       price: {
         value: 39_000,
@@ -178,12 +197,14 @@ export class CarsProviderService implements CarsProvider {
         millage: 9513,
         capacity: 2.0
       },
-      favourite: true,
+      features: {
+        favourite: true
+      },
       url: 'http://www.kup-auto.pl/index.php?s=card&id=100908',
       price: {
         value: 51_900,
         currency: 'PLN'
-      },
+      }
     }
   ];
 
@@ -206,6 +227,9 @@ export class CarsProviderService implements CarsProvider {
         value: 29_500,
         currency: 'PLN'
       },
+      features: {
+        trustLevel: 7
+      }
     }, {
       service: Services.AAA_AUTO,
       seller: Sellers.AAA_AUTO_WAW,
@@ -219,7 +243,9 @@ export class CarsProviderService implements CarsProvider {
         millage: 10341,
         capacity: 1.5
       },
-      favourite: true,
+      features: {
+        favourite: true
+      },
       url: 'https://www.aaaauto.pl/pl/toyota-yaris/car.html?id=242229257#category=12&srclp=small&promo=b',
       price: {
         value: 55_000,
@@ -238,7 +264,11 @@ export class CarsProviderService implements CarsProvider {
         millage: 13630,
         capacity: 2.0
       },
-      favourite: true,
+      features: {
+        favourite: true,
+        trustLevel: 10,
+        premium: true
+      },
       url: 'https://www.aaaauto.pl/pl/vw-arteon/car.html?id=220542916',
       price: {
         value: 207_000,
@@ -263,6 +293,10 @@ export class CarsProviderService implements CarsProvider {
         currency: 'PLN',
         rateValue: 2_000,
         rates: 60
+      },
+      features: {
+        premium: true,
+        trustLevel: 10
       }
     }
   ];

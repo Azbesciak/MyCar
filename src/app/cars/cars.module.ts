@@ -4,7 +4,6 @@ import {CARS_TOKEN} from './cars-provider';
 import {CarsProviderService} from './cars-provider.service';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule
   ],

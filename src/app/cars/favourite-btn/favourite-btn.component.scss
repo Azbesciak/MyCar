@@ -1,0 +1,16 @@
+$btn-size: 24px;
+app-favourite-btn {
+  .sub {
+    grid-area: sub;
+    justify-self: end;
+    mat-icon, & {
+      height: $btn-size;
+      line-height: $btn-size;
+      width: $btn-size;
+    }
+  }
+
+  .favourite {
+    color: gold;
+  }
+}

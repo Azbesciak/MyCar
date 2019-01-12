@@ -25,7 +25,7 @@ export interface CarOffer {
   car: Car;
   service: Service;
   seller: Seller;
-  favourite?: boolean;
+  features: Features;
   url: string;
 }
 
@@ -36,4 +36,10 @@ export interface Price {
   rates?: number;
   rateValue?: number;
   net?: boolean;
+}
+
+export interface Features {
+  premium?: boolean;
+  trustLevel?: number;
+  favourite?: boolean;
 }

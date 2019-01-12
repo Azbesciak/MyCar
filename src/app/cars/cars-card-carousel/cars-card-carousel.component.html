@@ -26,10 +26,7 @@
         <div class="price">{{value.price.value | currency:value.price.currency}}</div>
         <div class="city">{{value.seller.city}}</div>
         <div class="year">{{value.car.year}}</div>
-        <button class="sub" [ngClass]="{'favourite': value.favourite}"
-                mat-icon-button (click)="value.favourite = !value.favourite">
-          <mat-icon>star</mat-icon>
-        </button>
+        <app-favourite-btn [offer]="value"></app-favourite-btn>
       </mat-card-footer>
     </mat-card>
 
