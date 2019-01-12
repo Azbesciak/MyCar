@@ -13,7 +13,22 @@ export class CarsProviderService implements CarsProvider {
       service: Services.ALLEGRO,
       seller: Sellers.TADEUSZ,
       title: 'Best AUDI ever',
-      images: ['https://static.cargurus.com/images/site/2018/01/28/15/06/2018_audi_a5_sportback_2_0t_quattro_premium_plus_awd-pic-6950271395309042165-640x480.jpeg'],
+      images: [
+        'https://3.allegroimg.com/original/011e97/b4eedc624d53bcec22dc212ce263',
+        'https://e.allegroimg.com/original/0113b1/336d7f3947949760ae55b3d36a1e',
+        'https://c.allegroimg.com/original/01b129/414f74c34fe2a7bb551edf2e475c',
+        'https://1.allegroimg.com/original/01e120/adc5513b4b2ca9ddb1b4ef28a6e1',
+        'https://e.allegroimg.com/original/01a6b5/f0e6d8534b5fa216d578b72d711e',
+        'https://5.allegroimg.com/original/016960/754310644db19d77e902de243705',
+        'https://5.allegroimg.com/original/01160b/3e62ec2a44449221da1652046305',
+        'https://3.allegroimg.com/original/010595/8f2c0dc5402fb18cef8dc729da03',
+        'https://b.allegroimg.com/original/013d3d/8565e78f46cebbd0a643818a798b',
+        'https://a.allegroimg.com/original/01b179/6890f9fc468a9bb56a0e364cdf5a',
+        'https://7.allegroimg.com/original/01d454/f2473f0349e2a98fc95fa8ef21f7',
+        'https://a.allegroimg.com/original/01b424/1e8340ef4378819dcf753bc0dcca',
+        'https://7.allegroimg.com/original/0143f3/b69fad1f4a2398153aee4ef71927',
+        'https://1.allegroimg.com/original/01bb07/e378482f40c49a5e8db43efc2681'
+      ],
       features: {
         favourite: true,
         premium: true,
@@ -22,18 +37,18 @@ export class CarsProviderService implements CarsProvider {
       car: {
         brand: 'Audi',
         model: 'A5',
-        year: 2012,
-        millage: 123400,
-        hp: 310,
-        capacity: 3.2
+        year: 2017,
+        millage: 33110,
+        hp: 190,
+        capacity: 2.0
       },
-      url: 'https://allegro.pl/ogloszenie/audi-a5-8t-7722268565',
+      url: 'https://allegro.pl/ogloszenie/audi-a5-audi-a5-sportback-2-0-tfsi-s-7769636519',
       price: {
         currency: 'PLN',
         net: true,
-        rates: 24,
-        value: 15_000,
-        rateValue: 700
+        rates: 60,
+        value: 159_900,
+        rateValue: 2830
       }
     },
     {
