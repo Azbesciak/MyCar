@@ -3,6 +3,7 @@ app-cars-list {
   grid-row-gap: 10px;
 
   .offer {
+    cursor: pointer;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(12, 1fr);
