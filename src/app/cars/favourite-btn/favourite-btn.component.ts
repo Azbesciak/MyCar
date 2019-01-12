@@ -22,7 +22,7 @@ export class FavouriteBtnComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateFavourite() {
+  updateFavourite(event: any) {
     const action = this.reverseFavourite() ? 'added to' : 'removed from';
     this.snackBar.open(`Offer '${this.offer.title}' ${action} favourites!`, 'UNDO', {duration: 5000})
       .afterDismissed().subscribe(v => {
@@ -31,6 +31,7 @@ export class FavouriteBtnComponent implements OnInit {
         this.changeDetector.detectChanges();
       }
     });
+    event.stopPropagation();
   }
 
   private reverseFavourite() {

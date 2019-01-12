@@ -1,6 +1,6 @@
 <button mat-icon-button
         class="sub"
         [ngClass]="{'favourite': offer.features.favourite}"
-        (click)="updateFavourite()">
+        (click)="updateFavourite($event)">
   <mat-icon>star</mat-icon>
 </button>
