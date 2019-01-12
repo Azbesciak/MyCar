@@ -1,0 +1,8 @@
+<div>Trust level:</div>
+<div class="container">
+  <div class="value">{{trustLevel * 10}}%</div>
+  <div class="indicator"
+       [ngStyle]="{'clip-path': 'polygon(0% 0%, '+(trustLevel*10)+'% 0, '+(trustLevel*10)+'% 100%, 0 100%)'}">
+  </div>
+</div>
+
