@@ -24,8 +24,13 @@ export class CarsProviderService implements CarsProvider {
         capacity: 3.2
       },
       url: 'https://allegro.pl/ogloszenie/audi-a5-8t-7722268565',
-      price: '15 000 zł',
-
+      price: {
+        currency: 'PLN',
+        net: true,
+        rates: 24,
+        value: 15_000,
+        rateValue: 700
+      }
     },
     {
       service: Services.GRATKA,
@@ -56,7 +61,10 @@ export class CarsProviderService implements CarsProvider {
         capacity: 2.2
       },
       url: 'https://gratka.pl/motoryzacja/mercedes-benz-klasa-e-w211-lift-4x4-gwarancja-pakiet-korzysci-swiat-rabaty/ob/8081451',
-      price: '5 000 zł',
+      price: {
+        value: 5_000,
+        currency: 'PLN'
+      },
     },
     {
       service: Services.OTOMOTO,
@@ -72,7 +80,10 @@ export class CarsProviderService implements CarsProvider {
         capacity: 4.5
       },
       url: 'https://www.otomoto.pl/oferta/porsche-carrera-gt-pierwszy-wlasciciel-po-serwisie-unikat-od-budrolpol-pelna-akcyza-i-vat-ID6B3tQI.html#54823fda81',
-      price: '999 999 zł'
+      price: {
+        value: 999_999,
+        currency: 'EUR'
+      }
     },
     {
       service: Services.OLX,
@@ -88,7 +99,10 @@ export class CarsProviderService implements CarsProvider {
         capacity: 2.2
       },
       url: 'https://www.olx.pl/oferta/honda-civic-viii-1-8-i-vtec-type-s-CID5-IDxDc9x.html#0c8909f4af',
-      price: '1 000 000 zł',
+      price: {
+        value: 1_000_000,
+        currency: 'GBP'
+      },
     }
   ];
 
@@ -108,7 +122,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_mercedes_ml_63,mercedes_ml_63,IN8WKKJ.html',
-      price: '35 000 EUR',
+      price: {
+        value: 35_000,
+        currency: 'EUR'
+      },
 
     }, {
       service: Services.AUTO_GIELDA,
@@ -125,7 +142,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_inne,gmc_acadia_denali,IN8TRYR.html',
-      price: '135 000 zł'
+      price: {
+        value: 135_000,
+        currency: 'PLN'
+      }
     }, {
       service: Services.AUTO_GIELDA,
       seller: Sellers.PRZEMEK,
@@ -141,7 +161,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.autogielda.pl/sprzedam_nissan_42,nissan_qashqai__2_rok_2013_diesel_1_5,IP8RWFX.html',
-      price: '39 000 zł'
+      price: {
+        value: 39_000,
+        currency: 'PLN'
+      }
     }, {
       service: Services.KUP_AUTO,
       seller: Sellers.KASIA,
@@ -157,7 +180,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'http://www.kup-auto.pl/index.php?s=card&id=100908',
-      price: '51 900 zł',
+      price: {
+        value: 51_900,
+        currency: 'PLN'
+      },
     }
   ];
 
@@ -176,7 +202,10 @@ export class CarsProviderService implements CarsProvider {
         capacity: 1.8
       },
       url: 'https://www.gumtree.pl/a-samochody-osobowe/krakow/2010-skoda-superb-sedan/1003369242660911225329709',
-      price: '29 500 zł',
+      price: {
+        value: 29_500,
+        currency: 'PLN'
+      },
     }, {
       service: Services.AAA_AUTO,
       seller: Sellers.AAA_AUTO_WAW,
@@ -192,7 +221,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.aaaauto.pl/pl/toyota-yaris/car.html?id=242229257#category=12&srclp=small&promo=b',
-      price: '55 000 zł',
+      price: {
+        value: 55_000,
+        currency: 'PLN'
+      },
     }, {
       service: Services.AAA_AUTO,
       seller: Sellers.AAA_AUTO_POZ,
@@ -208,7 +240,10 @@ export class CarsProviderService implements CarsProvider {
       },
       favourite: true,
       url: 'https://www.aaaauto.pl/pl/vw-arteon/car.html?id=220542916',
-      price: '207 000 zł',
+      price: {
+        value: 207_000,
+        currency: 'PLN'
+      },
     }, {
       service: Services.AAA_AUTO,
       seller: Sellers.AAA_AUTO_POZ,
@@ -223,7 +258,12 @@ export class CarsProviderService implements CarsProvider {
         capacity: 2.0
       },
       url: 'https://www.aaaauto.pl/pl/audi-a5/car.html?id=236141387#category=15&srclp=4x4&promo=b',
-      price: '125 000 zł'
+      price: {
+        value: 125_000,
+        currency: 'PLN',
+        rateValue: 2_000,
+        rates: 60
+      }
     }
   ];
 

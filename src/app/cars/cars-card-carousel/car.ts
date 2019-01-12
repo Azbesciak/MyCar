@@ -20,11 +20,20 @@ export interface Seller {
 
 export interface CarOffer {
   title: string;
-  price: string;
+  price: Price;
   images: string[];
   car: Car;
   service: Service;
   seller: Seller;
   favourite?: boolean;
   url: string;
+}
+
+export interface Price {
+  value: number;
+  currency: string;
+  toNegotiate?: boolean;
+  rates?: number;
+  rateValue?: number;
+  net?: boolean;
 }

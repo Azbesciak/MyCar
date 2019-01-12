@@ -3,7 +3,7 @@
   <div class="offer-info">
     <mat-card-title>{{offer.title}}</mat-card-title>
     <mat-card-subtitle>{{offer.car.brand}} {{offer.car.model}}</mat-card-subtitle>
-    <div>{{offer.price}}</div>
+    <div>{{offer.price.value | currency:offer.price.currency}}</div>
   </div>
   <img class="logo-img" [src]="offer.service.logoUrl" [alt]="offer.service.name">
 </mat-card>
