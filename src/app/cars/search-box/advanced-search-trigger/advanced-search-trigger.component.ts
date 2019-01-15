@@ -13,8 +13,11 @@ export class AdvancedSearchTriggerComponent {
   @Output()
   advancedChange = new EventEmitter<boolean>();
 
-  updateView(visible: boolean) {
+  updateView(visible: boolean, event) {
     this.advanced = visible;
     this.advancedChange.emit(visible);
+    
+    event.preventDefault();
+    event.stopPropagation();
   }
 }
