@@ -12,3 +12,9 @@ html {
 .mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
   transform: none !important;
 }
+.pro-offer {
+  .price {
+    font-weight: 700;
+    color: darkred !important;
+  }
+}
