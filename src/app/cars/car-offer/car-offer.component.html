@@ -11,6 +11,7 @@
       <div class="rate" *ngIf="offer.price.rateValue">
         {{offer.price.rateValue | currency:offer.price.currency}} in {{offer.price.rates}} rates
       </div>
+      <div class="to-negotiate" *ngIf="offer.price.toNegotiate">To negotiate</div>
     </div>
     <div class="offer">
       <a [href]="offer.url" target="_blank" class="original-offer-reference">
