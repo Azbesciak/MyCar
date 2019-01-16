@@ -40,7 +40,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2017,
         millage: 33110,
         hp: 190,
-        capacity: 2.0
+        capacity: 2.0,
+        body: 'hatchback',
+        color: 'black',
+        doorsNumber: 4,
+        seatsNumber: 5,
+        transmission: 'automatic hydraulic',
+        condition: 'used',
+        FV: 'yes',
+        petrolType: 'petrol',
+        steeringWheel: 'left'
       },
       url: 'https://allegro.pl/ogloszenie/audi-a5-audi-a5-sportback-2-0-tfsi-s-7769636519',
       price: {
@@ -76,7 +85,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2011,
         millage: 31000,
         hp: 210,
-        capacity: 2.2
+        capacity: 2.2,
+        body: 'combi',
+        color: 'grey',
+        doorsNumber: 4,
+        seatsNumber: 5,
+        transmission: 'automatic hydraulic',
+        condition: 'used',
+        FV: 'yes',
+        petrolType: 'diesel',
+        steeringWheel: 'right'
       },
       url: 'https://gratka.pl/motoryzacja/mercedes-benz-klasa-e-w211-lift-4x4-gwarancja-pakiet-korzysci-swiat-rabaty/ob/8081451',
       price: {
@@ -99,7 +117,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2018,
         millage: 56000,
         hp: 500,
-        capacity: 4.5
+        capacity: 4.5,
+        body: 'coupe',
+        color: 'black',
+        transmission: 'automatic stepless (CVT)',
+        condition: 'used',
+        FV: 'yes',
+        petrolType: 'petrol',
+        steeringWheel: 'left',
+        doorsNumber: 2,
+        seatsNumber: 4
       },
       url: 'https://www.otomoto.pl/oferta/porsche-carrera-gt-pierwszy-wlasciciel-po-serwisie-unikat-od-budrolpol-pelna-akcyza-i-vat-ID6B3tQI.html#54823fda81',
       price: {
@@ -121,7 +148,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2017,
         hp: 190,
         millage: 11000,
-        capacity: 2.2
+        capacity: 2.2,
+        body: 'hatchback',
+        color: 'green',
+        doorsNumber: 2,
+        seatsNumber: 5,
+        transmission: 'automatic hydraulic',
+        condition: 'used',
+        FV: 'yes',
+        petrolType: 'petrol',
+        steeringWheel: 'left'
       },
       url: 'https://www.olx.pl/oferta/honda-civic-viii-1-8-i-vtec-type-s-CID5-IDxDc9x.html#0c8909f4af',
       price: {
@@ -146,7 +182,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2013,
         hp: 525,
         millage: 74000,
-        capacity: 5.5
+        capacity: 5.5,
+        body: 'suv',
+        color: 'black',
+        doorsNumber: 5,
+        seatsNumber: 5,
+        transmission: 'automatic dual-clutch(dct,dsg)',
+        condition: 'used',
+        FV: 'no',
+        petrolType: 'diesel',
+        steeringWheel: 'left'
       },
       features: {
         favourite: true
@@ -168,7 +213,16 @@ export class CarsProviderService implements CarsProvider {
         year: 2015,
         hp: 280,
         millage: 50000,
-        capacity: 3.6
+        capacity: 3.6,
+        body: 'suv',
+        color: 'black',
+        doorsNumber: 5,
+        seatsNumber: 5,
+        transmission: 'automatic dual-clutch(dct,dsg)',
+        condition: 'used',
+        FV: 'no',
+        petrolType: 'diesel',
+        steeringWheel: 'left'
       },
       features: {
         favourite: true

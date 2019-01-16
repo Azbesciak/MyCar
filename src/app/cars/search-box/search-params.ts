@@ -23,7 +23,9 @@ export interface ValueRange {
   to?: number;
 }
 
-export type Condition = 'notDamaged' | 'damaged';
+export type FVType = 'possible' | 'yes' | 'no';
+
+export type Condition = 'new' | 'used' | 'damaged';
 export type Petrol = 'diesel' | 'petrol' | 'LPG' | 'CNG/Hybrid' | 'electric';
 export const petrols: Petrol[] = [
   'diesel',
@@ -44,6 +46,9 @@ export const transmission: Transmission[] = [
   'automatic hydraulic',
   'automatic stepless (CVT)',
   'half-automatic'
+];
+export const conditions: Condition[] = [
+  'new', 'damaged', 'used'
 ];
 
 export type SteeringWheelSide = 'right' | 'left';
