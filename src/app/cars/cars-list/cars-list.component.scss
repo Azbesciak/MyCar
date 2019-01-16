@@ -38,5 +38,22 @@ app-cars-list {
       justify-self: flex-end;
       align-self: flex-end;
     }
+    .year-car {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      grid-column-gap: 20px;
+    }
+    .params {
+      display: flex;
+      grid-column: 6/13;
+      div:not(:last-child) {
+        &:after {
+          content: "•";
+          color: #97979791;
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+      }
+    }
   }
 }

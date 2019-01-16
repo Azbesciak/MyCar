@@ -1,9 +1,21 @@
 <mat-card *ngFor="let offer of offers" class="offer" (click)="open(offer)">
   <img class="car-img" [src]="offer.images[0]" [alt]="offer.title">
   <div class="offer-info">
-    <mat-card-title>{{offer.title}} <app-favourite-btn [offer]="offer"></app-favourite-btn></mat-card-title>
+    <mat-card-title>{{offer.title}}
+      <app-favourite-btn [offer]="offer"></app-favourite-btn>
+    </mat-card-title>
     <mat-card-subtitle>{{offer.car.brand}} {{offer.car.model}}</mat-card-subtitle>
-    <div>{{offer.price.value | currency:offer.price.currency}}</div>
+    <div class="year-car" [ngClass]="{'pro-offer': offer.features.premium}">
+      <div class="year">{{offer.car.year}}</div>
+      <div class="price">{{offer.price.value | currency:offer.price.currency}}</div>
+    </div>
+  </div>
+  <div class="params">
+    <div class="hp">{{offer.car.hp}} HP</div>
+    <div class="capacity">{{offer.car.capacity}} L</div>
+    <div class="millage">{{offer.car.millage | number}} KM</div>
+    <div class="transmission">{{offer.car.transmission}}</div>
+    <div class="petrol">{{offer.car.petrolType}}</div>
   </div>
   <img class="logo-img" [src]="offer.service.logoUrl" [alt]="offer.service.name">
 </mat-card>
