@@ -58,7 +58,96 @@ export class CarsProviderService implements CarsProvider {
         rates: 60,
         value: 159_900,
         rateValue: 2830
-      }
+      },
+      description: `
+<h4>PORSCHE INTERAUTO POLSKA, Autoryzowany Dealer Marki AUDI, przedstawia</h4>
+<b>AUDI A5</b>
+<p>Samochód, który oglądasz pochodzi z oferty Audi Select :plus.
+Audi Select :plus to program odkupu i sprzedaży wyselekcjonowanych i sprawdzonych samochodów używanych.
+ Oprócz możliwości zakupu sprawdzonego auta używanego w doskonałym stanie
+technicznym zyskujesz okazję do sprzedaży lub zamiany posiadanego samochodu na nowszy.</p>
+<p>Program Audi select :plus to nie tylko najwyższa jakość aut używanych, ale również
+szereg dodatkowych korzyści:
+<ul>
+<li>wyselekcjonowane samochody</li>
+<li>sprawdzony przebieg i pochodzenie</li>
+<li>sprawdzony stan techniczny</li>
+<li>profesjonalne przygotowanie auta</li>
+<li>jazda próbna</li>
+<li>gwarancja</li>
+<li>dedykowane opcje finansowania</li>
+<li>samochód w rozliczeniu</li>
+<li>prawo do wymiany</li>
+<li>personalizacja pojazdu</li>
+<li>gwarancja mobilności</li>
+</ul>
+Wyposażenie dodatkowe:
+<ul>
+<li>pakiet: Pakiet oświetlenia zewnętrznego i wnętrza Ambiente (Iluminacja konsoli środkowej
+ Podświetlane klamki drzwi, Pakiet dodatkowego oświetlenia wnętrza)</li>
+<li>pakiet: System nawigacji satelitarnej MMI Navigation plus na dysku twardym z MMI touch SD/WLAN/DVD/USB/Bluet
+ (System nawigacji satelitarnej MMI Navigation plus na dysku twardym z MMI touch SD/WLAN/DVD/USB/Bluet, Audi Connect - 3 lata)</li>
+<li>Audi Connect - 3 lata</li>
+<li>Audi parking system - czujniki parkowania tył</li>
+<li>Audi smartphone Interface</li>
+<li>Audi sound system</li>
+<li>Fotele przednie sportowe</li>
+<li>Elektryczna regulacja podparcia kręgosłupa, fotele przednie</li>
+<li>Kierownica wielofunkcyjna plus 3-ramienna - skórzana</li>
+<li>Przedni podłokietni, przesuwany</li>
+<li>Szyby dodatkowo przyciemniane, tył</li>
+<li>Tapicerka łączona Alcantara/skóra</li>
+<li>Tempomat</li>
+<li>Tuner cyfrowy stacji radiowych (DAB)</li>
+</ul>
+Wyposażenie standardowe:
+<ul>
+<li>ABS - system zapobiegający blokowaniu się kół podczas hamowania</li>
+<li>Airbag 6 sztuk (czołowe poduszki kierowcy i pasażera, boczne poduszki- przód, kurtyny powietrzne)</li>
+<li>Alarm</li>
+<li>Asystent podjazdu z Auto Hold, Audi Connect safety&service</li>
+<li>Audi drive select - regulacja charakterystyki układu kierowniczego</li>
+<li>Audi pre sense city - system zapobiegania kolizji poprzez ingerencję w układ hamulcowy</li>
+<li>Czujnik ciśnienia w oponach</li>
+<li>Czujnik zmierzchowy świateł z czujnikiem deszczu</li>
+<li>Dywaniki welurowe - przód i tył</li>
+<li>ESC - układ stabilizacji toru jazdy</li>
+<li>Elementy dekoracyjne wnętrza - Micrometallic</li>
+<li>Felgi aluminiowe 17 (15 ramienne) z ogumieniem 225/50</li>
+<li>Fotele przednie z manualną regulacją wysokości</li>
+<li>Hamulec postojowy - elektromechaniczny</li>
+<li>Interfejs Bluetooth</li>
+<li>Kierownica wielofunkcyjna 3-ramienna - skórzana</li>
+<li>Klimatyzacja automatyczna</li>
+<li>Kolumna kierownicy z manualną regulacją położenia</li>
+<li>Komputer pokładowy</li>
+<li>Koło zapasowe - dojazdowe, Lakier uni, Lampy ksenonowe z dynamiczną regulacją zasięgu</li>
+<li>światła do jazdy dziennej w technice LED</li>
+<li>Lampy tylne wykonane w technice diodowej (LED)</li>
+<li>Listwy ozdobne wokół szyb w kolorze srebrnym, Lusterka boczne ogrzewane i regulowane elektrycznie</li>
+<li>Lusterko wsteczne z automatyczną funkcją p/oślepieniową</li>
+<li>Pakiet dla palących</li>
+<li>Przycisk Start/Stop</li>
+<li>Radio MMI plus z Bluetooth, 8 głośników</li>
+<li>Sygnalizacja niezapiętych pasów bezpieczeństwa</li>
+<li>System Start/Stop z systemem rekuperacji, Szyby przednie elektryczne</li>
+<li>Szyby termoizolacyjne</li>
+<li>Tapicerka tkaninowa Index</li>
+<li>Tylna kanapa składana, dzielona, Uchwyty ISOFIX - przód i tył</li>
+<li>Wspomaganie układu kierowniczego - Servotronic</li>
+<li>Wspomaganie unoszenia i opuszczania pokrywy bagażnika, elektryczne</li>
+<li>Zamek centralny z pilotem, Zawieszenie dynamiczne</li>
+<li>Śruby zabezpieczające koła przed kradzieżą</li>
+<li>Światła do jazdy dziennej LED</li>
+</ul>
+</p>
+<p>
+W razie jakichkolwiek dodatkowych pytań pozostajemy do Państwa dyspozycji.
+</p>
+<p>
+Niniejsze ogłoszenie jest wyłącznie informacją handlową i nie stanowi oferty w myśl art. 66, §1. Kodeksu Cywilnego.
+ Sprzedający nie odpowiada za ewentualne błędy lub nie aktualność ogłoszenia.
+</p>`
     },
     {
       service: Services.GRATKA,

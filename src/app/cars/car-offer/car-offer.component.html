@@ -26,4 +26,5 @@
       [key]="kv.key | camelCaseToNormal" [value]="kv.value"
     ></app-key-value>
   </div>
+  <div *ngIf="offer.description" class="description" [innerHTML]="offer.description"></div>
 </ng-container>

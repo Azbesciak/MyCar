@@ -39,6 +39,7 @@ export interface CarOffer {
   seller: Seller;
   features: Features;
   url: string;
+  description?: string;
 }
 
 export interface Price {

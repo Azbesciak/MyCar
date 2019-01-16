@@ -12,8 +12,10 @@ export class CarOfferService {
   show(offer: CarOffer) {
     this.dialog.open(CarOfferModalComponent, {
       minWidth: 800,
-      maxWidth: 1200,
+      maxWidth: 1000,
       minHeight: 600,
+      maxHeight: '80vh',
+      panelClass: 'car-panel',
       data: {offer: offer}
     });
   }
