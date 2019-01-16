@@ -150,9 +150,9 @@ Niniejsze ogłoszenie jest wyłącznie informacją handlową i nie stanowi ofert
 </p>`
     },
     {
-      service: Services.GRATKA,
+      service: Services.OTOMOTO,
       seller: Sellers.RADEK,
-      title: 'Your new Merc!',
+      title: 'Mercedes-Benz Klasa E W212 Lift AMG Kombi 2.2',
       images: [
         'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6InN2YnE1NXFndWRxcjEtT1RPTU9UT1BMIn0.3TCdoRy-5bpqpCEuUOgE89pozFoguwetYMedkh-m7cE/image;s=1080x720;cars_;/868480520_;slot=1;filename=eyJmbiI6InN2YnE1NXFndWRxcjEtT1RPTU9UT1BMIn0.3TCdoRy-5bpqpCEuUOgE89pozFoguwetYMedkh-m7cE_rev001.jpg',
         'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6IjQ4eGxldnRnYjMxbi1PVE9NT1RPUEwifQ.5xy9ItJO6ySNf8GkzeIYiN__umc323hqZvX7tme0WwY/image;s=1080x720;cars_;/868480520_;slot=2;filename=eyJmbiI6IjQ4eGxldnRnYjMxbi1PVE9NT1RPUEwifQ.5xy9ItJO6ySNf8GkzeIYiN++umc323hqZvX7tme0WwY_rev001.jpg',
@@ -171,9 +171,9 @@ Niniejsze ogłoszenie jest wyłącznie informacją handlową i nie stanowi ofert
       car: {
         brand: 'Mercedes-Benz',
         model: 'E-Class',
-        year: 2011,
-        millage: 31000,
-        hp: 210,
+        year: 2013,
+        millage: 239_000,
+        hp: 170,
         capacity: 2.2,
         body: 'combi',
         color: 'grey',
@@ -181,19 +181,25 @@ Niniejsze ogłoszenie jest wyłącznie informacją handlową i nie stanowi ofert
         seatsNumber: 5,
         transmission: 'automatic hydraulic',
         condition: 'used',
-        FV: 'yes',
+        FV: 'no',
         petrolType: 'diesel',
         steeringWheel: 'right'
       },
-      url: 'https://gratka.pl/motoryzacja/mercedes-benz-klasa-e-w211-lift-4x4-gwarancja-pakiet-korzysci-swiat-rabaty/ob/8081451',
+      url: 'https://www.otomoto.pl/oferta/mercedes-benz-klasa-e-w212-lift-amg-kombi-2-2-cdi-170km-anglik-v5c-mot-zadbany-ID6zlX3R.html',
       price: {
-        value: 5_000,
-        currency: 'PLN'
+        value: 45_900,
+        currency: 'PLN',
+        rates: 72,
+        rateValue: 692,
+        toNegotiate: true
       },
       features: {
         trustLevel: 5,
         premium: true
-      }
+      },
+      description: `
+      Witam posiadam Mercedesa E W212 Pakiet AMG po lifcie 2013r 2.2 CDI 170KM dowód
+       V5C ważny mot stan bdb 2 kluczyki bezwypadkowy więcej info pod nr tel 608 - wyświetl numer - Możliwa zamiana!!`
     },
     {
       service: Services.OTOMOTO,
