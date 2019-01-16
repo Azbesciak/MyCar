@@ -8,6 +8,7 @@ import {KeyValueModule} from '../../ui/key-value/key-value.module';
 import {GalleryModule} from '../../ui/gallery/gallery.module';
 import {FavouriteBtnModule} from '../favourite-btn/favourite-btn.module';
 import {TrustIndicatorModule} from '../trust-indicator/trust-indicator.module';
+import {CamelCaseToNormalModule} from '../../ui/camel-case-to-normal/camel-case-to-normal.module';
 
 @NgModule({
   declarations: [CarOfferModalComponent, CarOfferComponent],
@@ -17,7 +18,8 @@ import {TrustIndicatorModule} from '../trust-indicator/trust-indicator.module';
     KeyValueModule,
     GalleryModule,
     FavouriteBtnModule,
-    TrustIndicatorModule
+    TrustIndicatorModule,
+    CamelCaseToNormalModule
   ],
   providers: [
     CarOfferService

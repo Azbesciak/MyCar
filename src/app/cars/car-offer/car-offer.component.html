@@ -23,7 +23,7 @@
   <div class="parameters">
     <app-key-value
       *ngFor="let kv of offer.car | keyvalue"
-      [key]="kv.key | titlecase" [value]="kv.value"
+      [key]="kv.key | camelCaseToNormal" [value]="kv.value"
     ></app-key-value>
   </div>
 </ng-container>
