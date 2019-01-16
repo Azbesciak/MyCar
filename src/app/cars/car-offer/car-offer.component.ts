@@ -14,12 +14,19 @@ export class CarOfferComponent implements OnInit {
   offer: CarOffer;
 
   images: Image[] = [];
+  carProperties: Entry[] = [];
 
   constructor() {
   }
 
   ngOnInit() {
+    this.carProperties = Object.entries(this.offer.car).map(v => ({key: v[0], value: v[1]}));
     this.images = this.offer.images.map(i => ({big: i, medium: i, small: i}));
   }
 
+}
+
+interface Entry {
+  key: string;
+  value: any;
 }

@@ -22,7 +22,7 @@
   </div>
   <div class="parameters">
     <app-key-value
-      *ngFor="let kv of offer.car | keyvalue"
+      *ngFor="let kv of carProperties"
       [key]="kv.key | camelCaseToNormal" [value]="kv.value"
     ></app-key-value>
   </div>
