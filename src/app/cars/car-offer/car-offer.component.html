@@ -18,7 +18,8 @@
         <div class="offer-reference">Go to offer</div>
       </a>
     </div>
-    <app-trust-indicator *ngIf="offer.features.trustLevel" [trustLevel]="offer.features.trustLevel"></app-trust-indicator>
+    <app-trust-indicator *ngIf="offer.features.trustLevel"
+                         [trustLevel]="offer.features.trustLevel"></app-trust-indicator>
   </div>
   <div class="parameters">
     <app-key-value
@@ -26,5 +27,8 @@
       [key]="kv.key | camelCaseToNormal" [value]="kv.value"
     ></app-key-value>
   </div>
-  <div *ngIf="offer.description" class="description" [innerHTML]="offer.description"></div>
+  <div *ngIf="offer.description" class="description">
+    <h2>Description</h2>
+    <div [innerHTML]="offer.description"></div>
+  </div>
 </ng-container>
