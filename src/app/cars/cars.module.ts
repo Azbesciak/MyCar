@@ -11,7 +11,8 @@ import {CarsProviderService} from './cars-provider.service';
       provide: CARS_TOKEN,
       useClass: CarsProviderService
     }
-  ]
+  ],
+  declarations: []
 })
 export class CarsModule {
 }

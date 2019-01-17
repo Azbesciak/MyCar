@@ -10,7 +10,6 @@ import {Subscriber} from '../../cars/subscriber';
 })
 export class SearchComponent extends Subscriber implements OnInit {
   recommendations: CarOffer[] = [];
-  subscriptions: CarOffer[] = [];
   lastViewed: CarOffer[] = [];
 
   constructor(
@@ -23,8 +22,6 @@ export class SearchComponent extends Subscriber implements OnInit {
     this.addSubs(
       this.carsProvider.getRecommendations()
         .subscribe(c => this.recommendations = c),
-      this.carsProvider.getSubscriptions()
-        .subscribe(c => this.subscriptions = c),
       this.carsProvider.getLastViewed()
         .subscribe(c => this.lastViewed = c)
     );
